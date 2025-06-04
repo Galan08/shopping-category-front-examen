@@ -22,7 +22,7 @@ function login(email, password) {
                 message = 'Inicio de sesión exitoso'
                 alertBuilder(alerttype, message)
                 response.json().then((data) =>(
-                    localStorage.setItem('token', data.token)
+                    localStorage.setItem('token', data.access_token)
                     ))
                     setTimeout(() => {
                         location.href = 'admin/dashboard.html'
